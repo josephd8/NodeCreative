@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<title>Do Your Math</title>
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<script src="javascripts/app.js"></script>
+
+</head>
+
+<body ng-app="app">
+
+<div class="container" id="app" ng-controller="mainCtrl">
+
+<div class="left-half" id="column1">
+
+Enter an expression (example: x^2): <input type="text" ng-model="expr">
+
+<br>
+
+<div style="
+    padding: 0px;
+    margin: 0px;
+    font-size: 11px;
+    height: 6%;
+">Note: For division, use "(over)" instead of "/"<br>Note: For Area under Curve, separate the endpoints and equation with vertical bar "|" (Ex: 2:4|x^3)</div>
+
+<br>
+<button mat-button ng-click="simplify()">Simplify</button>
+<button mat-button ng-click="factor()">Factor</button>
+<button mat-button ng-click="derive()">Derive</button>
+<button mat-button ng-click="integrate()">Integrate</button>
+<button mat-button ng-click="zeroes()">Find 0's</button>
+<button mat-button ng-click="area()">Area Under Curve</button> 
+
+<div ng-show="show" ng-init="show = false" style="height:25%; padding:40px; font-size:30px;">{{operation}} {{expression}} = {{result}}</div>
+
+
+<br><br>
+
+<button mat-button ng-click="reloadPage()">Refresh Log</button>
+</div>
+
+
+<div class="right-half" id="column2">
+
+<h1> Log </h1>
+<div class="log" style="overflow-y: scroll; height:90%;">
+
+    <div ng-if='!log.length' class=>
+
+    </div>
+
+      <p style="text-align:center; font-size:16px;" ng-repeat='l in log | reverse' class='log'>
+        {{l.operation}} {{l.expression}} =  {{l.result}}<br>
+      </p>
+
+</div>
+
+</div>
+
+</div>
+</body>

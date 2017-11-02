@@ -1,0 +1,52 @@
+
+a {
+  color: #00B7FF;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+html, body, div {
+  height: 100%;
+}
+
+body { 
+  color: #000;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-align: center;
+  background-color: #EBECEF;
+}
+
+section {
+  width: 100%;
+}
+
+article {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  padding: 1rem;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+/* Pattern styles */
+.left-half {
+  background-color: #EBECEF;
+  float: left;
+  width: 50%;
+  /*text-shadow: 0 2px 2px rgb(49, 117, 226);
+}
+.right-half {
+  background-color: #EBECEF;
+  float: left;
+  width: 50%;
+  /*text-shadow: 0 2px 2px rgb(183, 144, 38);
+}
+
+#searchResults {
+  font-size: 15px;
+}
